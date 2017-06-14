@@ -16,6 +16,7 @@ dependencies {
     testCompile 'com.jayway.restassured:rest-assured:2.8.0'
 }
 
+
 configurations {
     cucumberRuntime {
         extendsFrom testRuntime
@@ -35,7 +36,7 @@ task cucumber() {
 }
 
 test {
-    systemProperty "cucumber.options", System.properties.getProperty("cucumber.options")
+    systemProperty "cucumber.options", System.properties.getProperty("cucumber.options");
     systemProperties = System.properties
     testLogging.showStandardStreams = true
 }
